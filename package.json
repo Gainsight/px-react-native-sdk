@@ -9,15 +9,7 @@
     "pretty": "pretty-quick --staged",
     "lint": "tslint --project tsconfig.lint.json -t codeFrame",
     "cpd": "jscpd lib",
-    "tsc": "rimraf dist && tsc",
-    "build": ".buildscripts/build.sh",
-    "release": ".buildscripts/publish.sh",
-    "prepare.demo": ".buildscripts/prepareExample.sh",
-    "run.android": "yarn prepare.demo && cd example/PXBridgeDemo && react-native run-android",
-    "build.android": ".buildscripts/buildAndroid.sh",
-    "run.ios": "yarn prepare.demo && cd example/PXBridgeDemo && react-native run-ios",
-    "build.ios": ".buildscripts/buildIos.sh",
-    "build.all": ".buildscripts/prepareExample.sh && yarn build.ios && yarn build.android && .buildscripts/postBuild.sh"
+    "tsc": "rimraf dist && tsc"
   },
   "keywords": ["react-native", "GainsightPX", "Gainsight"],
   "author": "Gainsight",
@@ -25,6 +17,10 @@
   "peerDependencies": {
     "react-native": "^0.59.x"
   },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/Gainsight/px-react-native-sdk"
+	},
   "devDependencies": {
     "@types/react": "^16.8.8",
     "@types/react-native": "^0.57.41",

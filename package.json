@@ -1,0 +1,48 @@
+{
+  "name": "react-native-gainsight-px",
+  "version": "1.5.2",
+  "description": "React Native Bridge Implementation for Gainsight PX",
+  "main": "index",
+  "files": ["android", "ios", "lib/**/*.js", "lib/**/*.d.ts", "index.js", "index.d.ts"],
+  "scripts": {
+    "clean": "rimraf coverage generated ios/build android/build dist",
+    "pretty": "pretty-quick --staged",
+    "lint": "tslint --project tsconfig.lint.json -t codeFrame",
+    "cpd": "jscpd lib",
+    "tsc": "rimraf dist && tsc",
+    "build": ".buildscripts/build.sh",
+    "release": ".buildscripts/publish.sh",
+    "prepare.demo": ".buildscripts/prepareExample.sh",
+    "run.android": "yarn prepare.demo && cd example/PXBridgeDemo && react-native run-android",
+    "build.android": ".buildscripts/buildAndroid.sh",
+    "run.ios": "yarn prepare.demo && cd example/PXBridgeDemo && react-native run-ios",
+    "build.ios": ".buildscripts/buildIos.sh",
+    "build.all": ".buildscripts/prepareExample.sh && yarn build.ios && yarn build.android && .buildscripts/postBuild.sh"
+  },
+  "keywords": ["react-native", "GainsightPX", "Gainsight"],
+  "author": "Gainsight",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.59.x"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.8",
+    "@types/react-native": "^0.57.41",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.6",
+    "prettier": "1.15.2",
+    "pretty-quick": "^1.8.0",
+    "husky": "^1.2.1",
+    "jscpd": "^2.0.0",
+    "jscpd-badge-reporter": "^1.1.3",
+    "rimraf": "^2.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pretty",
+      "pre-push": "yarn lint && yarn cpd"
+    }
+  }
+}

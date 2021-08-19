@@ -6,7 +6,7 @@
 
 # Installation
 
-GainsighPX is available through CocoaPods.
+GainsighPX is available through npm.
 
 ### npm
 

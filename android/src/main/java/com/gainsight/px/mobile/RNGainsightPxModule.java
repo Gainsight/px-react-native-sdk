@@ -146,8 +146,14 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       if (configuration.hasKey("shouldTrackTapEvents")) {
         builder.shouldTrackTapEvents(configuration.getBoolean("shouldTrackTapEvents"));
       }
+      if (configuration.hasKey("reportTrackingIssues")) {
+        builder.shouldReportIssuesToServer(configuration.getBoolean("reportTrackingIssues"));
+      }
       if (configuration.hasKey("flushQueueSize")) {
         builder.flushQueueSize(configuration.getInt("flushQueueSize"));
+      }
+      if (configuration.hasKey("maxQueueSize")) {
+        builder.maxQueueSize(configuration.getInt("maxQueueSize"));
       }
       if (configuration.hasKey("flushInterval")) {
         builder.flushInterval(configuration.getInt("flushInterval"), TimeUnit.SECONDS);
@@ -167,11 +173,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       if (configuration.hasKey("proxy")) {
         builder.proxy(configuration.getString("proxy"));
       } else if (configuration.hasKey("host")) {
-        if (configuration.getString("host").equals("us")) {
-          builder.pxHost(GainsightPX.PXHost.US);
-        } else if (configuration.getString("host").equals("eu")) {
-          builder.pxHost(GainsightPX.PXHost.EU);
-        }
+        builder.pxHost(configuration.getString("host"));
       }
       if (configuration.hasKey("collectDeviceId")) {
         builder.collectDeviceId(configuration.getBoolean("collectDeviceId"));

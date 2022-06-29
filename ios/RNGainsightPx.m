@@ -108,7 +108,9 @@ RCT_EXPORT_METHOD(initialize:(NSDictionary *_Nonnull)params
   [configurations setFlushQueueSize:[[params objectForKey:@"flushQueueSize"] intValue]];
   [configurations setTrackApplicationLifecycleEvents:[[params objectForKey:@"trackApplicationLifeCycleEvents"] boolValue]];
   [configurations setShouldTrackTapEvents: [[params objectForKey:@"shouldTrackTapEvents"] boolValue]];
+  [configurations setReportTrackingIssues: [[params objectForKey:@"reportTrackingIssues"] boolValue]];
   [configurations setRecordScreenViews:false];
+  [configurations setMaxQueueSize: [[params objectForKey:@"maxQueueSize"] intValue]];
   
   NSString *proxy = params[@"proxy"];
   if(proxy != nil) {
@@ -119,8 +121,10 @@ RCT_EXPORT_METHOD(initialize:(NSDictionary *_Nonnull)params
     if (host != nil) {
       if ([host isEqualToString:@"us"]) {
         [configurations setConnection: [[PXConnection alloc] initWithHost:PXHostUs]];
-      }else if ([host isEqualToString:@"eu"]){
+      } else if ([host isEqualToString:@"eu"]){
         [configurations setConnection: [[PXConnection alloc] initWithHost:PXHostEu]];
+      } else if ([host isEqualToString:@"us2"]){
+        [configurations setConnection: [[PXConnection alloc] initWithHost:PXHostUs2]];
       }
     }
   }

@@ -2,7 +2,7 @@
 
 [![N|Solid](https://app-dev.aptrinsic.com/home/gainsight-px-logo.svg)](https://app.aptrinsic.com)
 
-![version](https://img.shields.io/badge/version-1.5.2-blue.svg) 
+![version](https://img.shields.io/badge/version-1.7.3-blue.svg) 
 
 # Installation
 
@@ -21,7 +21,12 @@ GainsighPX is available through npm.
 OR
 
 ```
-npm install https://github.com/Gainsight/px-react-native-sdk.git`
+npm install https://github.com/Gainsight/px-react-native-sdk.git` --save
+```
+### Expo
+Run the expo command as directed after installing the package using the npm command.
+```
+expo run:ios
 ```
 
 ## Usage

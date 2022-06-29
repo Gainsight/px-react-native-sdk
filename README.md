@@ -21,7 +21,12 @@ GainsighPX is available through npm.
 OR
 
 ```
-npm install https://github.com/Gainsight/px-react-native-sdk.git`
+npm install https://github.com/Gainsight/px-react-native-sdk.git` --save
+```
+### Expo
+Run the expo command as directed after installing the package using the npm command.
+```
+expo run:ios
 ```
 
 ## Usage

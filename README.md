@@ -1,6 +1,7 @@
 # React Native GainsightPX
 
 - Release versions
+  - [1.7.3](#173)
   - [1.3.0](#130)
   - [1.2.2](#122)
   - [1.2.1](#121)
@@ -18,6 +19,12 @@
   _ [Identify](#identify)
   _ [User](#user)
   _ [Account](#account)
+
+<a name="173">**1.7.3**</a>
+
+- Release Notes:
+  - Added `maxQueueSize` to Configurations.
+  - Auto linking iOS files to project.
 
 <a name="130">**1.3.0**</a>
 

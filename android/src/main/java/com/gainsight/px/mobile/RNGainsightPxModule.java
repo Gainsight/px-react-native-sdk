@@ -182,7 +182,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       try {
         instance = builder.build();
       } catch (IllegalStateException e) {
-        if (e.getMessage().contains("Duplicate gainsightPX client created with tag")) {
+        if (null != e.getMessage() && e.getMessage().contains("Duplicate gainsightPX client created with tag")) {
           instance = GainsightPX.with(context);
         } else {
           throw e;
@@ -190,14 +190,14 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       }
       if (instance != null) {
         instance.addUiDelegate(this.delegate);
-      }
-      if (configuration.hasKey(KEY_ENABLE)) {
-        instance.setEnable(configuration.getBoolean(KEY_ENABLE));
+        if (configuration.hasKey(KEY_ENABLE)) {
+          instance.setEnable(configuration.getBoolean(KEY_ENABLE));
+        }
       }
       try {
         GainsightPX.setSingletonInstance(instance);
       } catch (IllegalStateException e) {
-        if (!(e.getMessage().contains("Singleton instance already exists."))) {
+        if (!(null != e.getMessage() && e.getMessage().contains("Singleton instance already exists."))) {
           throw e;
         }
       }
@@ -476,6 +476,18 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
     } catch (Throwable tr) {
        promise.reject(tr);
       Log.e(TAG, "disable: ", tr);
+    }
+  }
+
+  @ReactMethod
+//  reset(): Promise<void>
+  public void reset(Promise promise) {
+    try {
+      GainsightPX.with(getReactApplicationContext()).reset();
+       promise.resolve(true);
+    } catch (Throwable tr) {
+       promise.reject(tr);
+      Log.e(TAG, "reset: ", tr);
     }
   }
 

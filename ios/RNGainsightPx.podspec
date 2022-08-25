@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'RNGainsightPx'
-  s.version = '1.7.3'
+  s.version = '1.7.4'
   s.license = 'MIT'
   s.summary = 'GainsightPX Engine Swift'
   s.homepage = 'https://app.aptrinsic.com/authentication/login'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.2'
 
   s.swift_version = '4.2'
-  s.source_files = '*.{h,m}'
+  s.source_files = '*.{h,m,xcframework}'
   s.ios.vendored_frameworks = 'PXKit.xcframework'
   s.dependency "React"
 end

@@ -20,6 +20,7 @@ export declare class GainsightPX {
     removeGlobalContextKeys(keys: string[]): Promise<GainsightPXCallback>;
     hasGlobalContextKey(key: string): Promise<boolean>;
     disable(): Promise<GainsightPXCallback>;
+    reset(): Promise<GainsightPXCallback>;
     private execute;
     private createError;
 }

@@ -2,7 +2,7 @@
 
 [![N|Solid](https://app-dev.aptrinsic.com/home/gainsight-px-logo.svg)](https://app.aptrinsic.com)
 
-![version](https://img.shields.io/badge/version-1.7.4-blue.svg) 
+![version](https://img.shields.io/badge/version-1.8.0-blue.svg) 
 
 # Installation
 

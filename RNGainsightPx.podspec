@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
 
   s.swift_version = '4.2'
   s.source_files = 'ios/*.{h,m}'
-  s.ios.vendored_frameworks = 'PXKit.xcframework'
+  s.ios.vendored_frameworks = 'ios/PXKit.xcframework'
   s.dependency "React"
 end

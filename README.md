@@ -2,7 +2,7 @@
 
 [![N|Solid](https://app-dev.aptrinsic.com/home/gainsight-px-logo.svg)](https://app.aptrinsic.com)
 
-![version](https://img.shields.io/badge/version-1.7.4-blue.svg) 
+![version](https://img.shields.io/badge/version-1.9.0-blue.svg) 
 
 # Installation
 
@@ -27,6 +27,9 @@ npm install https://github.com/Gainsight/px-react-native-sdk.git --save
 Run the expo command as directed after installing the package using the npm command.
 ```
 expo run:ios
+```
+```
+expo run:android
 ```
 
 ## Usage

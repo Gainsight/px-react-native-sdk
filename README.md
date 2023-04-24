@@ -26,16 +26,16 @@ npm install https://github.com/Gainsight/px-react-native-sdk.git --save
 ### Expo
 Run the expo command as directed after installing the package using the npm command.
 ```
-expo run:ios
+npx expo run:ios
 ```
 ```
-expo run:android
+npx expo run:android
 ```
 
 ## Usage
 
 ```javascript
-import RNGainsightPx from "react-native-gainsight-px";
+import { GainsightPX, Configurations, PXUser } from 'react-native-gainsight-px';
 ```
 
 # Documentation

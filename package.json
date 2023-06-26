@@ -1,6 +1,6 @@
 {
   "name": "react-native-gainsight-px",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "React Native Bridge Implementation for Gainsight PX",
   "main": "index",
   "files": ["android", "ios", "lib/**/*.js", "lib/**/*.d.ts", "index.js", "index.d.ts", "expo-module.config.json", "RNGainsightPx.podspec"],

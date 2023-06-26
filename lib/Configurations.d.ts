@@ -5,6 +5,7 @@ export declare class Configurations {
     flushInterval: number;
     enableLogs: boolean;
     trackApplicationLifeCycleEvents: boolean;
+    isTrackTapInAllLayouts: boolean;
     shouldTrackTapEvents: boolean;
     enable: boolean;
     collectDeviceId: boolean;

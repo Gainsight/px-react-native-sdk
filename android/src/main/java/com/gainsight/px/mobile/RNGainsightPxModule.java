@@ -44,13 +44,10 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   private final int delayMillis = 1000;
   private final UIDelegate delegate = new UIDelegate() {
     @Override
-    public void startTrackingUserInteractions(InteractionReport interactionReport, Activity activity) {
-    }
+    public void startTrackingUserInteractions(InteractionReport interactionReport, Activity activity) {}
 
     @Override
-    public String getContainerViewClass() {
-      return getName();
-    }
+    public String getContainerViewClass() { return getName(); }
 
     @Override
     public void getViewAtPosition(Point point, final UIDelegate.Callback<TreeBuilder> callback) {
@@ -89,12 +86,10 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
     }
 
     @Override
-    public void startScrollListener(Callback<Boolean> callback) {
-    }
+    public void startScrollListener(Callback<Boolean> callback) {}
 
     @Override
-    public void stopScrollListener() {
-    }
+    public void stopScrollListener() {}
 
     @Override
     public void getViewPosition(final JSONObject jsonObject, final Callback<Rect> callback) {
@@ -112,7 +107,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
     return "RNGainsightPx";
   }
 
-  // initialize(configuration: JsonMap): Promise<void>
+  //  initialize(configuration: JsonMap): Promise<void>
   @ReactMethod
   public void initialize(ReadableMap configuration, final Promise promise) {
     try {
@@ -142,10 +137,8 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
           args.putString("actionType", engagementMetaData.actionType);
           args.putMap("params", castToWritableMap(engagementMetaData.params));
           args.putMap("scope", castToWritableMap(engagementMetaData.scope));
-          if (RNGainsightPxModule.this.reactContext != null && RNGainsightPxModule.this.reactContext
-              .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class) != null) {
-            RNGainsightPxModule.this.reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                .emit("engagementCallBack", args);
+          if (RNGainsightPxModule.this.reactContext != null && RNGainsightPxModule.this.reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class) != null) {
+            RNGainsightPxModule.this.reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit("engagementCallBack", args);
           }
           return true;
         }
@@ -178,8 +171,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       if (configuration.hasKey("trackApplicationLifeCycleEvents")) {
         builder.trackApplicationLifecycleEvents(configuration.getBoolean("trackApplicationLifeCycleEvents"));
       }
-      // recordScreenViews should always disabled because we can't catch RN screen
-      // changes
+      // recordScreenViews should always disabled because we can't catch RN screen changes
       builder.recordScreenViews(false);
       if (configuration.hasKey("proxy")) {
         builder.proxy(configuration.getString("proxy"));
@@ -220,7 +212,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // custom(event: string): Promise<void>
+//  custom(event: string): Promise<void>
   public void custom(String event, final Promise promise) {
     try {
       GainsightPX.with(getReactApplicationContext()).custom(event, new GainsightPX.ExceptionHandler() {
@@ -236,7 +228,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // customEventWithProperties(event: string, properties?: JsonMap): Promise<void>
+//	customEventWithProperties(event: string, properties?: JsonMap): Promise<void>
   public void customEventWithProperties(String event, ReadableMap properties, final Promise promise) {
     try {
       HashMap<String, Object> values = convertToMap(properties);
@@ -269,7 +261,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // screen(name: string, properties?: JsonMap): Promise<void>
+  //	screen(name: string, properties?: JsonMap): Promise<void>
   public void screen(String name, ReadableMap properties, final Promise promise) {
     try {
       HashMap<String, Object> values = convertToMap(properties);
@@ -286,18 +278,15 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // screenEvent(name: string, className: string, properties?: JsonMap):
-  // Promise<void>
+  //	screenEvent(name: string, className: string, properties?: JsonMap): Promise<void>
   public void screenEvent(String name, String className, ReadableMap properties, final Promise promise) {
     try {
       HashMap<String, Object> values = convertToMap(properties);
-      GainsightPX.with(getReactApplicationContext()).screen(
-          new ScreenEventData(name).putScreenClass(className).putProperties(values),
-          new GainsightPX.ExceptionHandler() {
-            public void onExceptionOccurred(String methodName, ValueMap params, String exceptionMessage) {
-              promise.reject(methodName, onReject("screenEvent", params, exceptionMessage));
-            }
-          });
+      GainsightPX.with(getReactApplicationContext()).screen(new ScreenEventData(name).putScreenClass(className).putProperties(values), new GainsightPX.ExceptionHandler() {
+        public void onExceptionOccurred(String methodName, ValueMap params, String exceptionMessage) {
+          promise.reject(methodName, onReject("screenEvent", params, exceptionMessage));
+        }
+      });
       promise.resolve(onRsolve("screenEvent"));
     } catch (Throwable tr) {
       // promise.reject(e);
@@ -306,7 +295,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // identifyUserId(userId: String): Promise<void>
+//    identifyUserId(userId: String): Promise<void>
   public void identifyUserId(String userId, final Promise promise) {
     try {
       GainsightPX.with(getReactApplicationContext()).identify(userId, new GainsightPX.ExceptionHandler() {
@@ -322,7 +311,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // identifyUser(user: JsonMap): Promise<void>
+//  identifyUser(user: JsonMap): Promise<void>
   public void identifyUser(ReadableMap user, final Promise promise) {
     try {
       User gainsightUser = buildUser(user);
@@ -339,17 +328,16 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // identify(user: JsonMap, account?: JsonMap): Promise<void>
+//  identify(user: JsonMap, account?: JsonMap): Promise<void>
   public void identify(ReadableMap user, ReadableMap account, final Promise promise) {
     try {
       User gainsightUser = buildUser(user);
       Account gainsightAccount = buildAccount(account);
-      GainsightPX.with(getReactApplicationContext()).identify(gainsightUser, gainsightAccount,
-          new GainsightPX.ExceptionHandler() {
-            public void onExceptionOccurred(String methodName, ValueMap params, String exceptionMessage) {
-              promise.reject(methodName, onReject("identify", params, exceptionMessage));
-            }
-          });
+      GainsightPX.with(getReactApplicationContext()).identify(gainsightUser, gainsightAccount, new GainsightPX.ExceptionHandler() {
+        public void onExceptionOccurred(String methodName, ValueMap params, String exceptionMessage) {
+          promise.reject(methodName, onReject("identify", params, exceptionMessage));
+        }
+      });
       promise.resolve(onRsolve("identify"));
     } catch (Throwable tr) {
       // promise.reject(e);
@@ -358,7 +346,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // flush(): Promise<void>
+//  flush(): Promise<void>
   public void flush(final Promise promise) {
     try {
       GainsightPX.with(getReactApplicationContext()).flush(new GainsightPX.ExceptionHandler() {
@@ -374,7 +362,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // enterEditing(url: string): Promise<void>
+//  enterEditing(url: string): Promise<void>
   public void enterEditing(String url, final Promise promise) {
     try {
       Uri uri = Uri.parse(url);
@@ -389,7 +377,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // exitEditing(): Promise<void>
+//  exitEditing(): Promise<void>
   public void exitEditing(final Promise promise) {
     try {
       GainsightPX.with(getReactApplicationContext()).exitEditingMode();
@@ -401,7 +389,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // setGlobalContext(globalContextJsonMap: ReadableMap): Promise<void>
+//  setGlobalContext(globalContextJsonMap: ReadableMap): Promise<void>
   public void setGlobalContext(ReadableMap globalContextJsonMap, Promise promise) {
     try {
       if (globalContextJsonMap != null) {
@@ -427,15 +415,15 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       } else {
         GainsightPX.with(getReactApplicationContext()).setGlobalContext(null);
       }
-      promise.resolve(true);
+       promise.resolve(true);
     } catch (Throwable tr) {
-      promise.reject(tr);
+       promise.reject(tr);
       Log.e(TAG, "globalContext: ", tr);
     }
   }
 
   @ReactMethod
-  // hasKey(key: String): Promise<void>
+//  hasKey(key: String): Promise<void>
   public void hasGlobalContextKey(String key, Promise promise) {
     try {
       boolean result = false;
@@ -452,7 +440,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  // removeKey(key: String): Promise<void>
+//  removeKey(key: String): Promise<void>
   public void removeGlobalContextKeys(ReadableArray keys, Promise promise) {
     try {
       if (keys != null) {
@@ -463,46 +451,70 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
           }
         }
       }
-      promise.resolve(true);
+       promise.resolve(true);
     } catch (Throwable tr) {
-      promise.reject(tr);
+       promise.reject(tr);
       Log.e(TAG, "globalContext: ", tr);
     }
   }
 
   @ReactMethod
-  // enable(): Promise<void>
+//  enable(): Promise<void>
   public void enable(Promise promise) {
     try {
       GainsightPX.with(getReactApplicationContext()).setEnable(true);
-      promise.resolve(true);
+       promise.resolve(true);
     } catch (Throwable tr) {
-      promise.reject(tr);
+       promise.reject(tr);
       Log.e(TAG, "enable: ", tr);
     }
   }
 
   @ReactMethod
-  // disable(): Promise<void>
+//  disable(): Promise<void>
   public void disable(Promise promise) {
     try {
-      GainsightPX.with(getReactApplicationContext()).setEnable(false);
-      promise.resolve(true);
+      GainsightPX.with().setEnable(false);
+       promise.resolve(true);
     } catch (Throwable tr) {
-      promise.reject(tr);
+       promise.reject(tr);
       Log.e(TAG, "disable: ", tr);
     }
   }
 
   @ReactMethod
-  // reset(): Promise<void>
+//  reset(): Promise<void>
   public void reset(Promise promise) {
     try {
-      GainsightPX.with(getReactApplicationContext()).reset();
+      GainsightPX.with().reset();
+       promise.resolve(true);
+    } catch (Throwable tr) {
+       promise.reject(tr);
+      Log.e(TAG, "reset: ", tr);
+    }
+  }
+
+  @ReactMethod
+//  hardReset(): Promise<void>
+  public void hardReset(Promise promise) {
+    try {
+      GainsightPX.with().shutdown();
       promise.resolve(true);
     } catch (Throwable tr) {
       promise.reject(tr);
-      Log.e(TAG, "reset: ", tr);
+      Log.e(TAG, "hardReset: ", tr);
+    }
+  }
+
+  @ReactMethod
+//  enableEngagements(enable: boolean): Promise<GainsightPXCallback>;
+  public void enableEngagements(boolean enable, Promise promise) {
+    try {
+      GainsightPX.with().enableEngagements(enable);
+      promise.resolve(true);
+    } catch (Throwable tr) {
+      promise.reject(tr);
+      Log.e(TAG, "enableEngagements: ", tr);
     }
   }
 
@@ -511,7 +523,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
     if (null != user) {
       gainsightUser = new User(user.getString("ide"));
       HashMap<String, Object> customAttributes = new HashMap<>();
-      for (ReadableMapKeySetIterator iterator = user.keySetIterator(); iterator.hasNextKey();) {
+      for (ReadableMapKeySetIterator iterator = user.keySetIterator(); iterator.hasNextKey(); ) {
         String key = iterator.nextKey();
         switch (key) {
           case "ide":
@@ -537,10 +549,10 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
             if (type == ReadableType.String) {
               gainsightUser.putSignUpDate(user.getString(key));
             } else if (type == ReadableType.Number) {
-              gainsightUser.putSignUpDate((long) user.getDouble(key));
+              gainsightUser.putSignUpDate((long)user.getDouble(key));
             }
           }
-            break;
+          break;
           case "title":
             gainsightUser.putTitle(user.getString(key));
             break;
@@ -615,10 +627,10 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
             if (type == ReadableType.String) {
               gainsightUser.putFirstVisitDate(user.getString(key));
             } else if (type == ReadableType.Number) {
-              gainsightUser.putFirstVisitDate((long) user.getDouble(key));
+              gainsightUser.putFirstVisitDate((long)user.getDouble(key));
             }
           }
-            break;
+          break;
           case "score":
             gainsightUser.putScore(user.getInt(key));
             break;
@@ -645,7 +657,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
     if (null != account) {
       gainsightAccount = new Account(account.getString("id"));
       HashMap<String, Object> customAttributes = new HashMap<>();
-      for (ReadableMapKeySetIterator iterator = account.keySetIterator(); iterator.hasNextKey();) {
+      for (ReadableMapKeySetIterator iterator = account.keySetIterator(); iterator.hasNextKey(); ) {
         String key = iterator.nextKey();
         switch (key) {
           case "id":
@@ -742,9 +754,9 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
 
   private void copyReadableMapValue(ReadableMap source, Map<String, Object> target, String key) {
     if ((null != source) &&
-        (null != target) &&
-        (null != key) &&
-        (source.hasKey(key))) {
+            (null != target) &&
+            (null != key) &&
+            (source.hasKey(key))) {
       switch (source.getType(key)) {
         case Boolean:
           target.put(key, source.getBoolean(key));
@@ -839,7 +851,7 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
     Iterator iterator = map.entrySet().iterator();
 
     while (iterator.hasNext()) {
-      Map.Entry pair = (Map.Entry) iterator.next();
+      Map.Entry pair = (Map.Entry)iterator.next();
       Object value = pair.getValue();
 
       if (value == null) {

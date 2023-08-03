@@ -21,6 +21,8 @@ export declare class GainsightPX {
     hasGlobalContextKey(key: string): Promise<boolean>;
     disable(): Promise<GainsightPXCallback>;
     reset(): Promise<GainsightPXCallback>;
+    hardReset(): Promise<GainsightPXCallback>;
+    enableEngagements(enable: boolean): Promise<GainsightPXCallback>;
     private execute;
     private createError;
 }

@@ -39,5 +39,7 @@ export interface RNGainsightPx {
     hasGlobalContextKey(key: string): Promise<boolean>;
     removeGlobalContextKeys(keys: string[]): Promise<GainsightPXCallback>;
     reset(): Promise<GainsightPXCallback>;
+    hardReset(): Promise<GainsightPXCallback>;
+    enableEngagements(enable: boolean): Promise<GainsightPXCallback>;
 }
 export declare const Bridge: RNGainsightPx;

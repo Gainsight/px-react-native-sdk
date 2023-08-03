@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'RNGainsightPx'
-  s.version = '1.9.0'
+  s.version = '1.10.1'
   s.license = 'MIT'
   s.summary = 'GainsightPX Engine Swift'
   s.homepage = 'https://app.aptrinsic.com/authentication/login'

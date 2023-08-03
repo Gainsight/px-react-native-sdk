@@ -29,7 +29,9 @@ typedef enum {
   ExitEditing,
   Enable,
   Disable,
-  Reset
+  Reset,
+  HardReset,
+  EnableEngagements
 } GainsightPXMethod;
 
  NSString *gainsightPXMethodName(GainsightPXMethod input) {
@@ -50,7 +52,9 @@ typedef enum {
     @"exitEditing",
     @"enable",
     @"disable",
-    @"reset"
+    @"reset",
+    @"hardReset",
+    @"enableEngagements"
     ];
     return (NSString *)[names objectAtIndex:input];
 }
@@ -418,6 +422,28 @@ RCT_EXPORT_METHOD(reset
   [self handleCallBack:reject
                resolve:resolve
           functionName:gainsightPXMethodName(Reset)
+            properties:nil error:nil];
+}
+
+//hardReset(): Promise<void>;
+RCT_EXPORT_METHOD(hardReset
+                  :(RCTPromiseResolveBlock)resolve
+                  :(RCTPromiseRejectBlock)reject) {
+  [[GainsightPX shared] hardReset];
+  [self handleCallBack:reject
+               resolve:resolve
+          functionName:gainsightPXMethodName(HardReset)
+            properties:nil error:nil];
+}
+
+//enableEngagements(enable: BOOL): Promise<void>;
+RCT_EXPORT_METHOD(enableEngagements: (BOOL)enable
+                  :(RCTPromiseResolveBlock)resolve
+                  :(RCTPromiseRejectBlock)reject) {
+  [[GainsightPX shared] engagementsWithEnable: enable];
+  [self handleCallBack:reject
+               resolve:resolve
+          functionName:gainsightPXMethodName(EnableEngagements)
             properties:nil error:nil];
 }
 

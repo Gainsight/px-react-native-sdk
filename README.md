@@ -2,7 +2,7 @@
 
 [![N|Solid](https://app-dev.aptrinsic.com/home/gainsight-px-logo.svg)](https://app.aptrinsic.com)
 
-![version](https://img.shields.io/badge/version-1.9.1-blue.svg) 
+![version](https://img.shields.io/badge/version-1.10.1-blue.svg)
 
 # Installation
 
@@ -23,11 +23,21 @@ OR
 ```
 npm install https://github.com/Gainsight/px-react-native-sdk.git --save
 ```
+
+ALSO it's available directly [on npm](https://www.npmjs.com/package/@gainsight-px/react-native-gainsight-px)
+
+```
+npm i @gainsight-px/react-native-gainsight-px
+```
+
 ### Expo
+
 Run the expo command as directed after installing the package using the npm command.
+
 ```
 npx expo run:ios
 ```
+
 ```
 npx expo run:android
 ```
@@ -35,14 +45,12 @@ npx expo run:android
 ## Usage
 
 ```javascript
-import { GainsightPX, Configurations, PXUser } from 'react-native-gainsight-px';
+import { GainsightPX, Configurations, PXUser } from "react-native-gainsight-px";
 ```
 
 # Documentation
 
-
 More detailed documentation is available at: <https://support.gainsight.com/PX/Mobile/Mobile_Platforms/Install_Gainsight_PX_React-Native>
-
 
 ## Editor Deeplinking
 

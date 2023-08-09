@@ -1,12 +1,12 @@
 name: Publish Package to npmjs
 
 on:
-  pull_request:
+  push:
     branches:  [ main ] 
-    types: [ closed ]
 
 jobs:
-  build:
+  publish:
+    environment: Production
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,18 +17,8 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Step 4 - Modifying repo level .npmrc file for npm registry
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_PUBLIC_TOKEN }}
-        run: |
-          pushd $GITHUB_WORKSPACE/$repoName
-          echo "registry=https://registry.npmjs.com/" >> .npmrc
-          echo "//registry.npmjs.com/:_authToken=${NPM_TOKEN}" >> .npmrc
-          cp .npmrc ~/.npmrc
-          popd
-              
+      
       - run: npm install -g npm
-      - run: npm ci
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_PUBLIC_TOKEN }}

@@ -14,7 +14,7 @@ GainsighPX is available through npm.
  "dependencies": {
     ...,
     ...,
-    "react-native-gainsight-px": "https://github.com/Gainsight/px-react-native-sdk.git"
+    "@gainsight-px/react-native-gainsight-px": "https://github.com/Gainsight/px-react-native-sdk.git"
   }
 ```
 
@@ -45,7 +45,7 @@ npx expo run:android
 ## Usage
 
 ```javascript
-import { GainsightPX, Configurations, PXUser } from "react-native-gainsight-px";
+import { GainsightPX, Configurations, PXUser } from "@gainsight-px/react-native-gainsight-px";
 ```
 
 # Documentation

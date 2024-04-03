@@ -1,6 +1,6 @@
 {
   "name": "@gainsight-px/react-native-gainsight-px",
-  "version": "1.10.1",
+  "version": "1.11.0",
   "description": "React Native Bridge Implementation for Gainsight PX",
   "main": "index",
   "files": [
@@ -48,9 +48,9 @@
     "jscpd-badge-reporter": "^1.1.3",
     "rimraf": "^2.6.2"
   },
-  "repository": { 
-    "type": "git", 
-    "url": "https://github.com/Gainsight/px-react-native-sdk" 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gainsight/px-react-native-sdk"
   },
   "husky": {
     "hooks": {

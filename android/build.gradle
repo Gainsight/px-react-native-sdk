@@ -40,6 +40,6 @@ android {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.gainsight.px:mobile-sdk:1.10.1'
+    implementation 'com.gainsight.px:mobile-sdk:1.11.0'
 }
   

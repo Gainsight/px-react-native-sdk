@@ -1,6 +1,6 @@
 {
   "name": "@gainsight-px/react-native-gainsight-px",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "description": "React Native Bridge Implementation for Gainsight PX",
   "main": "index",
   "files": [

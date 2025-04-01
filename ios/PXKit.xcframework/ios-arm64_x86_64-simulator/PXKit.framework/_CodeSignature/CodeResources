@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/GPXAnalyticsConfiguration.h</key>
 		<data>
-		YHZzQdEHzBVMTyUYa7Iz7ozEVi0=
+		JVWXrpFfToIVYyhjGWA/FnJ2I9Y=
 		</data>
 		<key>Headers/GPXCrypto.h</key>
 		<data>
-		l3usxuiJlgrJSJsRFE/oU6mRFWk=
+		yfxSLz04isd9o4vEFBQ/wk5G8jg=
 		</data>
 		<key>Headers/GPXSerializableValue.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/PXKit-Swift.h</key>
 		<data>
-		Bi3C99byO74hgENR9igpN6wRhkA=
+		7Ec3p1Oj3OHx2o0x71cMvFE/AUc=
 		</data>
 		<key>Headers/PXKit.h</key>
 		<data>
@@ -54,47 +54,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZXleW/E0Qa4OcN7k59216EvZBHY=
+		BxkYVYAPa48M7j1xPZzM10qnthQ=
 		</data>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		34WTGrJ/fxMp8PI2TLAQGdAqCSg=
+		nBhlBPXgFz2W+Ys69ji5w8ZAWqo=
 		</data>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		RZZ2qfu8o0ncFeO0W+2kh2Hulgo=
+		ntyP0Rly6gGu//v7FOnY6PsK7WI=
 		</data>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		I7dnxd5urX+ZAgflSWKUxSMOXJY=
+		n4hAOs0ydLy5FCWjTWqOoWb6dRA=
 		</data>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RZZ2qfu8o0ncFeO0W+2kh2Hulgo=
+		ntyP0Rly6gGu//v7FOnY6PsK7WI=
 		</data>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dOE9bAkMcCY4VzrXUnZHoW+qh6I=
+		tCcY/h2rfjqU0hRvy/FiwbnElSI=
 		</data>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		34WTGrJ/fxMp8PI2TLAQGdAqCSg=
+		nBhlBPXgFz2W+Ys69ji5w8ZAWqo=
 		</data>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		3wWVebj8cyC27wZMIDgeYP6Zu2o=
+		ZfYXCPIM+DE8CPL4kmYbP54bFGY=
 		</data>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SgREH+qtrgV/m0tpbBCR+Hjrs1g=
+		PIJweRAuXq6CF0P+hxUi4Zsa7DE=
 		</data>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		3wWVebj8cyC27wZMIDgeYP6Zu2o=
+		ZfYXCPIM+DE8CPL4kmYbP54bFGY=
 		</data>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lNBkZTgwOvT370uE/OTvlX6Zdt8=
+		j2/jwzDPJ7gdKpLa8qATwi0XzVs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -172,14 +172,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YZdmFO4/pT2XMagjg8SjQc8Tg3hC0ldNAgtEk6kM0Lo=
+			3f8lixwYNZ0KFr/GC6RTRkjw3+XTjTssa4IQJ+cJeas=
 			</data>
 		</dict>
 		<key>Headers/GPXCrypto.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xNmu7aOYDsWPzXA1X/9iAvDtD0WfgDBWdGWOQIQelME=
+			00OWvoIwEssZiOBjkxrMzVj7Ky5OtnHpQKeKuEAF5JQ=
 			</data>
 		</dict>
 		<key>Headers/GPXSerializableValue.h</key>
@@ -193,7 +193,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pAzhi8cFuH52Am4oeAFzV8h5bnM/IO0oqkgNOMXGkFM=
+			cUKvPOLWlrcJ/FBsJ1fgDtzVkJXLyMEvmi52S8/Aj4Q=
 			</data>
 		</dict>
 		<key>Headers/PXKit.h</key>
@@ -207,70 +207,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNcySZ7KxkUjUUD86OMdaw7Fas0la1PG+JNHQtg3UbU=
+			4pkKcLXMRMWPoBlp3JH11e/8e+RabKBDzFZbo8cQr4g=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NTuAWZToV4R7KV7lOKBmaQjN2ELFZIkTEDruXGzm+Fc=
+			2BlbpjQLbMoXIW6eVpqXh8zXkjPg8ugPyRIHxjHYrGM=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6HaQ9lmt8EuCRYUrYFYGwO73wICnaDm09wNTzEGX1fE=
+			Rts+FZwpWeqOoc4x+Z7Tqi/jvjgG7rkbzkLKiJJKwj4=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NTuAWZToV4R7KV7lOKBmaQjN2ELFZIkTEDruXGzm+Fc=
+			2BlbpjQLbMoXIW6eVpqXh8zXkjPg8ugPyRIHxjHYrGM=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0YElBXIwEkIgTztOlLK/Z/JyGx67xjREyUgcZbFPPN4=
+			t61U4o7WIAnbUDvny+gt85jgnFjAWkvZt7CxC0F4sCc=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNcySZ7KxkUjUUD86OMdaw7Fas0la1PG+JNHQtg3UbU=
+			4pkKcLXMRMWPoBlp3JH11e/8e+RabKBDzFZbo8cQr4g=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yN0+L8wrrHdv1moyFnuSZ/4AQY4EpvlcwQTIWzHZLxo=
+			cWB3u98tKlzE9tToqfb083+7+7vpX8xXF1PDWuIachU=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AJUtD9HcxFnJtW0CPy2dinBkpN1/e+j6OE2HHkLsOZs=
+			PQR/ltZoWKSDxwmkyLT+MGuTtktoBdbOY8Q5oUjRj1I=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yN0+L8wrrHdv1moyFnuSZ/4AQY4EpvlcwQTIWzHZLxo=
+			cWB3u98tKlzE9tToqfb083+7+7vpX8xXF1PDWuIachU=
 			</data>
 		</dict>
 		<key>Modules/PXKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zqpFkpphTYOspY5GYMDmMd1oPk3wEk7NMVlb09FGqdM=
+			pGJeKQQ1CRw/CClwbBUUAiOS2I3QbIxI3ugmisJoIZc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

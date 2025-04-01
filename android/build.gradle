@@ -28,8 +28,9 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 33
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        compileSdkVersion rootProject.ext.compileSdkVersion
         versionCode 1
         versionName "1.0"
     }
@@ -40,6 +41,6 @@ android {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.gainsight.px:mobile-sdk:1.11.0'
+    implementation 'com.gainsight.px:mobile-sdk:1.12.1'
 }
   

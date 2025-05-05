@@ -178,9 +178,6 @@ public class RNGainsightPxModule extends ReactContextBaseJavaModule {
       } else if (configuration.hasKey("host")) {
         builder.pxHost(configuration.getString("host"));
       }
-      if (configuration.hasKey("collectDeviceId")) {
-        builder.collectDeviceId(configuration.getBoolean("collectDeviceId"));
-      }
       GainsightPX instance;
       try {
         instance = builder.build();

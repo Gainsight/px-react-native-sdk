@@ -1,6 +1,6 @@
 {
   "name": "@gainsight-px/react-native-gainsight-px",
-  "version": "1.12.3",
+  "version": "1.12.4",
   "description": "React Native Bridge Implementation for Gainsight PX",
   "main": "index",
   "files": [
@@ -22,9 +22,9 @@
     "build": ".buildscripts/build.sh",
     "release": ".buildscripts/publish.sh",
     "prepare.demo": ".buildscripts/prepareExample.sh",
-    "run.android": "yarn prepare.demo && cd example/PXBridgeDemo && react-native run-android",
+    "run.android": "yarn prepare.demo && cd example/SampleProject && react-native run-android",
     "build.android": ".buildscripts/buildAndroid.sh",
-    "run.ios": "yarn prepare.demo && cd example/PXBridgeDemo && react-native run-ios",
+    "run.ios": "yarn prepare.demo && cd example/SampleProject && react-native run-ios",
     "build.ios": ".buildscripts/buildIos.sh",
     "build.all": ".buildscripts/prepareExample.sh && yarn build.ios && yarn build.android && .buildscripts/postBuild.sh"
   },

@@ -1,8 +1,11 @@
 {
   "name": "@gainsight-px/react-native-gainsight-px",
-  "version": "1.12.5",
+  "version": "1.13.0",
   "description": "React Native Bridge Implementation for Gainsight PX",
   "main": "index",
+  "expo": {
+    "plugin": "./app.plugin.js"
+  },
   "files": [
     "android",
     "ios",
@@ -10,7 +13,7 @@
     "lib/**/*.d.ts",
     "index.js",
     "index.d.ts",
-    "expo-module.config.json",
+    "app.plugin.js",
     "RNGainsightPx.podspec"
   ],
   "scripts": {
@@ -28,28 +31,32 @@
     "build.ios": ".buildscripts/buildIos.sh",
     "build.all": ".buildscripts/prepareExample.sh && yarn build.ios && yarn build.android && .buildscripts/postBuild.sh"
   },
-  "keywords": [
-    "react-native",
-    "GainsightPX",
-    "Gainsight"
-  ],
+  "keywords": ["react-native", "GainsightPX", "Gainsight"],
   "author": "Gainsight",
   "license": "",
   "peerDependencies": {
-    "react-native": ">= 0.59.0"
+    "react-native": ">= 0.59.0",
+    "@expo/config-plugins": "*"
+  },
+  "peerDependenciesMeta": {
+    "@expo/config-plugins": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@expo/config-plugins": "^54.0.4",
     "@types/react": "^16.8.8",
     "@types/react-native": "^0.57.41",
+    "husky": "^1.2.1",
+    "jscpd": "^2.0.0",
+    "jscpd-badge-reporter": "^1.1.3",
+    "prettier": "1.15.2",
+    "pretty-quick": "^1.8.0",
+    "rimraf": "^2.6.2",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.6",
-    "prettier": "1.15.2",
-    "pretty-quick": "^1.8.0",
-    "husky": "^1.2.1",
-    "jscpd": "^2.0.0",
-    "rimraf": "^2.6.2"
+    "typescript": "^3.1.6"
   },
   "repository": {
     "type": "git",
@@ -60,6 +67,5 @@
       "pre-commit": "yarn pretty",
       "pre-push": "yarn lint && yarn cpd"
     }
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  }
 }

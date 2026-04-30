@@ -32,7 +32,11 @@ npm i @gainsight-px/react-native-gainsight-px
 
 ### Expo
 
-Run the expo command as directed after installing the package using the npm command.
+Run the expo commands as directed after installing the package.
+
+```
+npx expo prebuild
+```
 
 ```
 npx expo run:ios
@@ -40,18 +44,6 @@ npx expo run:ios
 
 ```
 npx expo run:android
-```
-
-#### Building on EAS (Expo Application Service)
-
-If there are problem building the apps on EAS or even locally, please add the following to your `package.json` file:
-
-```
-"expo": {
-    "autolinking": {
-      "exclude": ["@gainsight-px/react-native-gainsight-px"]
-    }
-  }
 ```
 
 ## Usage

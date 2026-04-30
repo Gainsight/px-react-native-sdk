@@ -11,9 +11,6 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
-        maven {
-            url "https://github.com/Gainsight/px-android/raw/main/"
-        }
         google()
         mavenCentral()
     }
@@ -39,6 +36,6 @@ android {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.gainsight.px:mobile-sdk:1.12.2'
+    implementation 'com.gainsight.px:gainsight-px:1.13.3'
 }
   

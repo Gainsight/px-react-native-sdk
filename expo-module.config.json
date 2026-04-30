@@ -1,9 +1,0 @@
-{
-  "platforms": ["ios", "android"],
-  "ios": {
-    "podspecPath": "RNGainsightPx.podspec"
-  },
-  "android": {
-    "modules": ["com.gainsight.px.mobile.RNGainsightPxModule"]
-  }
-}

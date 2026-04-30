@@ -2,7 +2,7 @@
 
 [![N|Solid](https://app-dev.aptrinsic.com/home/gainsight-px-logo.svg)](https://app.aptrinsic.com)
 
-![version](https://img.shields.io/badge/version-1.12.5-blue.svg)
+![version](https://img.shields.io/badge/version-1.13.0-blue.svg)
 
 # Installation
 
@@ -32,7 +32,11 @@ npm i @gainsight-px/react-native-gainsight-px
 
 ### Expo
 
-Run the expo command as directed after installing the package using the npm command.
+Run the expo commands as directed after installing the package.
+
+```
+npx expo prebuild
+```
 
 ```
 npx expo run:ios
@@ -40,18 +44,6 @@ npx expo run:ios
 
 ```
 npx expo run:android
-```
-
-#### Building on EAS (Expo Application Service)
-
-If there are problem building the apps on EAS or even locally, please add the following to your `package.json` file:
-
-```
-"expo": {
-    "autolinking": {
-      "exclude": ["@gainsight-px/react-native-gainsight-px"]
-    }
-  }
 ```
 
 ## Usage

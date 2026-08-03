@@ -1,0 +1,35 @@
+name: Copy px-react-native-sdk repo secrets to AWS Secrets Manager
+on: workflow_dispatch
+
+jobs:
+  export:
+    runs-on: arc-common
+    env:
+      NPM_PUBLISH_PUBLIC_TOKEN: ${{ secrets.NPM_PUBLISH_PUBLIC_TOKEN }}
+    steps:
+      - name: Upsert repo secrets into Secrets Manager
+        run: |
+          set -euo pipefail
+          SECRET_NAME="github/Gainsight/reposecrets"
+          REPO="${GITHUB_REPOSITORY##*/}"     # e.g. "px-react-native-sdk"
+
+          # Build { "repo/KEY": "value", ... }, dropping empties
+          NEW=$(jq -n \
+            --arg repo "$REPO" \
+            --arg NPM_PUBLISH_PUBLIC_TOKEN  "$NPM_PUBLISH_PUBLIC_TOKEN" \
+            '{
+              ("\($repo)/NPM_PUBLISH_PUBLIC_TOKEN"): $NPM_PUBLISH_PUBLIC_TOKEN
+             } | with_entries(select(.value != ""))')
+
+          if aws secretsmanager describe-secret --secret-id "$SECRET_NAME" >/dev/null 2>&1; then
+            # Merge into existing so other repos' keys survive
+            CUR=$(aws secretsmanager get-secret-value --secret-id "$SECRET_NAME" \
+                    --query SecretString --output text 2>/dev/null || echo '{}')
+            MERGED=$(jq -s '.[0] * .[1]' <(echo "$CUR") <(echo "$NEW"))
+            aws secretsmanager put-secret-value \
+              --secret-id "$SECRET_NAME" --secret-string "$MERGED" --no-cli-pager
+          else
+            aws secretsmanager create-secret \
+              --name "$SECRET_NAME" --secret-string "$NEW" --no-cli-pager
+          fi
+          echo "upserted $SECRET_NAME with keys for repo $REPO"
